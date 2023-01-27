@@ -13,10 +13,10 @@ Module MultiplicationTable
     Sub Main(args As String())
         Dim userNumber As Integer
         Dim correctInput As Boolean = False
-        Dim Index As Integer
-        Dim Index2 As Integer
-        Dim IndexString As String
-        Dim Total As Integer
+        Dim index As Integer
+        Dim index2 As Integer
+        Dim indexString As String
+        Dim total As Integer
 
         Console.WriteLine("Hello user, please input an integer from 1 to 32. For viewing sake.")
 
@@ -31,11 +31,11 @@ Module MultiplicationTable
             End Try
         Loop
 
-        For Index = 1 To userNumber
-            For Index2 = 1 To userNumber
-                Total = Index * Index2
-                IndexString = String.Format(CStr(Total))
-                Console.Write(IndexString.PadLeft(5))
+        For index = 1 To userNumber
+            For index2 = 1 To userNumber
+                total = index * index2
+                indexString = String.Format(CStr(total))
+                Console.Write(indexString.PadLeft(5))
             Next
             Console.WriteLine("")
         Next
