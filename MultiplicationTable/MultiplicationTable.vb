@@ -36,7 +36,7 @@ Module MultiplicationTable
         For index = 1 To userNumber 'This generates each row of values
             For index2 = 1 To userNumber    'This generates each column of values for every row
                 total = index * index2
-                indexString = String.Format(CStr(total))    'Creates a string whose value is amended every "for" loop
+                indexString = String.Format(CStr(total))    'Creates an array whose value is amended every "for" loop
                 Console.Write(indexString.PadLeft(5))   'Pads a string to be a certain length by adding spaces to the left of it. This alings all rows to the right.
             Next
             Console.WriteLine("")
