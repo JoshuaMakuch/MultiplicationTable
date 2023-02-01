@@ -16,8 +16,8 @@ Module MultiplicationTable
         Dim correctInput As Boolean = False
         Dim index As Integer
         Dim index2 As Integer
-        Dim indexString As String
         Dim total As Integer
+        Dim printedValue As String
 
         Console.WriteLine("Hello user, please input an integer from 1 to 32. For viewing sake.")
 
@@ -34,12 +34,17 @@ Module MultiplicationTable
 
 
         For index = 1 To userNumber 'This generates each row of values
+
             For index2 = 1 To userNumber    'This generates each column of values for every row
-                total = index * index2
-                indexString = String.Format(CStr(total))    'Creates an array whose value is amended every "for" loop
-                Console.Write(indexString.PadLeft(5))   'Pads a string to be a certain length by adding spaces to the left of it. This alings all rows to the right.
+
+                total = index * index2  'This does the math for the value of the column in the row based on which row/column it is in which changes every for loop
+                printedValue = CStr(total).PadLeft(5) 'Pads the value to be a certain total length by adding spaces to the left of it. This alings all rows to the right.
+                Console.Write(printedValue) 'Prints the padded value
+
             Next
-            Console.WriteLine("")
+
+            Console.WriteLine("") 'Starts a new line for each of the rows
+
         Next
 
     End Sub
